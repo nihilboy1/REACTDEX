@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { usePokeContext } from "../hooks/usePokeContext";
+import { TypeSpan } from "./TypeSpan";
 
 type pokeTypeProps = {
   type: { name: string };
@@ -52,14 +53,14 @@ export function PokemonDetails() {
       {pokeData ? (
         <>
           <img
-            className="ml-[16rem] blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse"
+            className="ml-[12rem] blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse"
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${choosenPokemonID}.png`}
             alt="pokemon image background"
-            width={500}
+            width={600}
           />
           <div className="absolute top-0 left-[11rem] w-[40rem] flex-col p-5  ">
             <h1 className="text-white text-center font-mono text-lg">
-              {pokeData.name} #{pokeData.id}
+              {pokeData.name} <span className="underline italic">#{pokeData.id}</span>
             </h1>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${choosenPokemonID}.png`}
@@ -67,77 +68,35 @@ export function PokemonDetails() {
               className="mx-auto mt-8 mb-5"
               width={300}
             />
-            <div className="grid grid-cols-2 bg-white bg-opacity-30 w-[20rem] rounded p-2 mx-auto">
-              <div className="flex gap-2 mb-2 ">
-                <p className="font-sans uppercase font-bold">Attack: </p>
+            <div className="grid grid-cols-2  bg-zinc-800 bg-opacity-5 shadow-lg  w-[20rem] rounded-xl p-2 mx-auto ">
+              <div className="flex gap-2 mb-3 justify-center  ">
+                <p className="font-sans uppercase font-bold  ">Attack: </p>
                 <span className="font-mono text-white">{pokeData.attack}</span>
               </div>
-              <div className="flex gap-2 mb-2  ">
-                <p className="font-sans uppercase font-bold">Height: </p>
+              <div className="flex gap-2 mb-3 justify-center  ">
+                <p className="font-sans uppercase font-bold  ">Height: </p>
                 <span className="font-mono text-white">{pokeData.height}</span>
               </div>
-              <div className="flex gap-2 mb-2 ">
-                <p className="font-sans uppercase font-bold">Defense: </p>
+              <div className="flex gap-2 mb-3 justify-center ">
+                <p className="font-sans uppercase font-bold  ">Defense: </p>
                 <span className="font-mono text-white">{pokeData.defense}</span>
               </div>
-              <div className="flex gap-2 mb-2 ">
-                <p className="font-sans uppercase font-bold">Weight: </p>
+              <div className="flex gap-2 mb-3 justify-center ">
+                <p className="font-sans uppercase font-bold  ">Weight: </p>
                 <span className="font-mono text-white">{pokeData.weight}</span>
               </div>
-              <div className="flex gap-2 mb-2 ">
-                <p className="font-sans uppercase font-bold">Speed: </p>
+              <div className="flex gap-2 mb-3 justify-center ">
+                <p className="font-sans uppercase font-bold  ">Speed: </p>
                 <span className="font-mono text-white">{pokeData.speed}</span>
               </div>
-              <div className="flex gap-2 mb-2 ">
-                <p className="font-sans uppercase font-bold">HP: </p>
+              <div className="flex gap-2 mb-3 justify-center ">
+                <p className="font-sans uppercase font-bold  ">HP: </p>
                 <span className="font-mono text-white">{pokeData.hp}</span>
               </div>
-              <div className="flex gap-2 mb-2 items-center ">
-                <p className="font-sans uppercase font-bold">Types: </p>
+              <div className="flex gap-2 mb-3 justify-center col-start-1 col-end-3 ">
+                <p className="font-sans uppercase font-bold  ">Types: </p>
                 {pokeData.types.map((type) => {
-                  return (
-                    <span
-                      className={`font-mono text-xs text-white ${
-                        type === "fire"
-                          ? "bg-red-500"
-                          : type === "water"
-                          ? "bg-blue-500"
-                          : type === "electric"
-                          ? "bg-yellow-500"
-                          : type === "grass"
-                          ? "bg-green-500"
-                          : type === "ice"
-                          ? "bg-cyan-200"
-                          : type === "fighting"
-                          ? "bg-orange-900"
-                          : type === "poison"
-                          ? "bg-purple-500"
-                          : type === "ground"
-                          ? "bg-amber-700"
-                          : type === "flying"
-                          ? "bg-sky-300"
-                          : type === "psychic"
-                          ? "bg-fuchsia-500"
-                          : type === "bug"
-                          ? "bg-lime-700"
-                          : type === "rock"
-                          ? "bg-amber-900"
-                          : type === "ghost"
-                          ? "bg-violet-500"
-                          : type === "dragon"
-                          ? "bg-emerald-500"
-                          : type === "dark"
-                          ? "bg-black-500"
-                          : type === "steel"
-                          ? "bg-teal-600"
-                          : type === "fairy"
-                          ? "bg-pink-600"
-                          : "bg-pink-400"
-                      } p-1 rounded`}
-                    >
-                      {type}
-                    </span>
-                  );
+                  return <TypeSpan type={type} />;
                 })}
               </div>
             </div>

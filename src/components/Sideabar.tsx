@@ -28,7 +28,7 @@ export function Sidebar({ pokeUrls }: SidebarProps) {
         onClick={() => setChoosenPokemonID(0)}
         className="flex flex-row items-center gap-2 justify-center w-full"
       >
-        <h1 className="font-mono text-white text-2xl ">ReactDex</h1>
+        <h1 className="shadow-md font-mono text-white text-2xl ">ReactDex</h1>
         <img
           src="/assets/pokeball.png"
           width={pokeballSize}
@@ -36,14 +36,16 @@ export function Sidebar({ pokeUrls }: SidebarProps) {
           alt="Pokeball icon"
         />
       </button>
-      <div className="scrollbarhidden h-[30rem] w-[20rem] bg-zinc-900 p-4 rounded-md overflow-hidden hover:overflow-y-auto">
+      <div className="shadow-lg h-[30rem] w-[20rem] bg-zinc-900 p-4 rounded-md overflow-hidden hover:overflow-y-auto">
         {pokeUrls.map((pokeData) => {
           const id = getIdFromUrl(pokeData.url);
           return <PokemonBar key={id} id={id} name={pokeData.name} />;
         })}
       </div>
-      <footer className="text-center text-white font-mono text-[0.5rem] mt-1.5">
-        Coded by: <span className="text-red-500">@Nihilboy</span>
+      <footer className="text-center text-white font-mono text-[0.5rem] hover:text-[0.6rem] mt-4 transition">
+        <a href="https://github.com/nihilboy1" target="_blank">
+          Coded by: <span className="text-red-500">@Nihilboy</span>
+        </a>
       </footer>
     </nav>
   );
