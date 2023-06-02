@@ -53,12 +53,12 @@ export function PokemonDetails() {
   }, [pokeData]);
   return (
     <div
-      className={`absolute top-0 left-0 h-[100vh] lg:h-[90rem] w-full overflow-hidden border`}
+      className={`absolute top-0 left-0 h-[100vh] lg:h-[90rem] w-full overflow-hidden`}
     >
       {pokeData ? (
         <>
           <img
-            className={`ml-[12rem] xl:ml-[6rem] lg:mt-[12rem] border blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse ${absoluteCenter}`}
+            className={`ml-[12rem] xl:ml-[6rem] lg:mt-[12rem] blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse ${absoluteCenter}`}
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${choosenPokemonID}.png`}
             alt="pokemon image background"
             width={600}
