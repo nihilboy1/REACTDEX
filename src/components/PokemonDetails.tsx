@@ -66,7 +66,7 @@ export function PokemonDetails() {
           <div
             className={`absolute top-0 left-[11%] w-[40rem] flex-col p-5 ${absoluteCenter}  xl:left-[5%] `}
           >
-            <h1 className="text-white text-center font-mono text-lg lg:mt-[35rem]">
+            <h1 className="text-zinc-100 text-center font-mono text-lg lg:mt-[35rem]">
               {pokeData.name}{" "}
               <span className="underline italic">#{pokeData.id}</span>
             </h1>
@@ -76,30 +76,42 @@ export function PokemonDetails() {
               className="mx-auto mt-8 mb-5"
               width={300}
             />
-            <div className="grid grid-cols-2  bg-zinc-800 bg-opacity-5 shadow-lg  w-[20rem] rounded-xl p-2 mx-auto ">
+            <div className="grid grid-cols-2  bg-zinc-800 bg-opacity-5 shadow-lg w-[20rem] rounded-xl p-2 mx-auto pt-6 lg:bg-zinc-100 ">
               <div className="flex gap-2 mb-3 justify-center  ">
                 <p className="font-sans uppercase font-bold  ">Attack: </p>
-                <span className="font-mono text-white">{pokeData.attack}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700 ">
+                  {pokeData.attack}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center  ">
                 <p className="font-sans uppercase font-bold  ">Height: </p>
-                <span className="font-mono text-white">{pokeData.height}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700">
+                  {pokeData.height}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center ">
                 <p className="font-sans uppercase font-bold  ">Defense: </p>
-                <span className="font-mono text-white">{pokeData.defense}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700">
+                  {pokeData.defense}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center ">
                 <p className="font-sans uppercase font-bold  ">Weight: </p>
-                <span className="font-mono text-white">{pokeData.weight}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700">
+                  {pokeData.weight}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center ">
                 <p className="font-sans uppercase font-bold  ">Speed: </p>
-                <span className="font-mono text-white">{pokeData.speed}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700">
+                  {pokeData.speed}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center ">
                 <p className="font-sans uppercase font-bold  ">HP: </p>
-                <span className="font-mono text-white">{pokeData.hp}</span>
+                <span className="font-mono text-zinc-100 lg:text-zinc-700">
+                  {pokeData.hp}
+                </span>
               </div>
               <div className="flex gap-2 mb-3 justify-center col-start-1 col-end-3 ">
                 <p className="font-sans uppercase font-bold  ">Types: </p>

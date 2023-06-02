@@ -38,7 +38,7 @@ export function Sidebar({ pokeUrls }: SidebarProps) {
           alt="Pokeball icon"
         />
       </button>
-      <div className="shadow-lg h-[30rem] w-[20rem] bg-zinc-900 p-4 rounded-md overflow-hidden hover:overflow-y-auto">
+      <div className="shadow-lg h-[30rem] w-[20rem] lg:w-[17.5rem] bg-zinc-900 p-4 rounded-md overflow-hidden hover:overflow-y-auto">
         {pokeUrls.map((pokeData) => {
           const id = getIdFromUrl(pokeData.url);
           return <PokemonBar key={id} id={id} name={pokeData.name} />;
