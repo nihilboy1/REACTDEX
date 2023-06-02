@@ -12,6 +12,7 @@ export function PokemonBar({ id, name }: pokemonBarProps) {
   const selectedPokemon = choosenPokemonID == Number(id) ? true : false;
   const capitalizedName = capitalizeString(name);
 
+
   return (
     <button
       onClick={() => setChoosenPokemonID(Number(id))}

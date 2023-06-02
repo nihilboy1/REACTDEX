@@ -21,9 +21,11 @@ export function Sidebar({ pokeUrls }: SidebarProps) {
       return null;
     }
   }
+  const nav1MediaMax1023 =
+    "lg:absolute lg:mt-14  lg:translate-x-[-50%] lg:translate-y-[-50%] lg:top-[50%] lg:left-[50%]";
 
   return (
-    <nav className="mr-12 mt-1 z-40 ">
+    <nav className={`mr-12 mt-1 z-40  ${nav1MediaMax1023}`}>
       <button
         onClick={() => setChoosenPokemonID(0)}
         className="flex flex-row items-center gap-2 justify-center w-full"

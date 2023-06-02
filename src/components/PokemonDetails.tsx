@@ -45,21 +45,28 @@ export function PokemonDetails() {
     setPokeData(pokeDataFetch);
   }
 
+  const absoluteCenter =
+    "lg:absolute lg:translate-x-[-50%] lg:translate-y-[-50%] lg:top-[50%] lg:left-[50%] lg:ml-[0]";
+
   useEffect(() => {
     fetchPokemonByID();
   }, [pokeData]);
   return (
-    <div className="absolute top-0 left-0 h-[100vh] w-full overflow-hidden ">
+    <div
+      className={`absolute top-0 left-0 h-[100vh] lg:h-[90rem] w-full overflow-hidden border`}
+    >
       {pokeData ? (
         <>
           <img
-            className="ml-[12rem] blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse"
+            className={`ml-[12rem] xl:ml-[6rem] lg:mt-[12rem] border blur-3xl scale-[2] overflow-hidden opacity-60 animate-pulse ${absoluteCenter}`}
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${choosenPokemonID}.png`}
             alt="pokemon image background"
             width={600}
           />
-          <div className="absolute top-0 left-[11rem] w-[40rem] flex-col p-5  ">
-            <h1 className="text-white text-center font-mono text-lg">
+          <div
+            className={`absolute top-0 left-[11%] w-[40rem] flex-col p-5 ${absoluteCenter}  xl:left-[5%] `}
+          >
+            <h1 className="text-white text-center font-mono text-lg lg:mt-[35rem]">
               {pokeData.name}{" "}
               <span className="underline italic">#{pokeData.id}</span>
             </h1>
