@@ -4,17 +4,17 @@
 </h3>
 
 <h1>🔎 | Vizualização do projeto:</h1>
-<img src="https://i.imgur.com/swhYrBR.gif" alt="gif da aplicação" />
-<br/>
 <img src="https://i.imgur.com/u4mI7tZ.png" alt="Foto da aplicação mobile" />
 <br/>
 <img src="https://i.imgur.com/SfD6Iba.png" alt="Foto da aplicação homepage" />
 <br/>
 <img src="https://i.imgur.com/pyBwPQV.png" alt="Foto da aplicação" />
 <br/>
+<img src="https://i.imgur.com/swhYrBR.gif" alt="gif da aplicação" />
+<br/>
 
 <h1>👾 | Visite o deploy :)</h1>
-<a href="https://dexreact.netlify.app/">REACTDEX</a>
+<a href="https://dexreact.netlify.app/">https://dexreact.netlify.app/</a>
 
 <h1>🛸 | Tecnologias:</h1>
 <p>
