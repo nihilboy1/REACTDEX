@@ -60,7 +60,8 @@ export function PokemonDetails() {
           />
           <div className="absolute top-0 left-[11rem] w-[40rem] flex-col p-5  ">
             <h1 className="text-white text-center font-mono text-lg">
-              {pokeData.name} <span className="underline italic">#{pokeData.id}</span>
+              {pokeData.name}{" "}
+              <span className="underline italic">#{pokeData.id}</span>
             </h1>
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${choosenPokemonID}.png`}
@@ -96,7 +97,7 @@ export function PokemonDetails() {
               <div className="flex gap-2 mb-3 justify-center col-start-1 col-end-3 ">
                 <p className="font-sans uppercase font-bold  ">Types: </p>
                 {pokeData.types.map((type) => {
-                  return <TypeSpan type={type} />;
+                  return <TypeSpan key={type} type={type} />;
                 })}
               </div>
             </div>

@@ -15,9 +15,9 @@ export function PokemonBar({ id, name }: pokemonBarProps) {
   return (
     <button
       onClick={() => setChoosenPokemonID(Number(id))}
-      className={` shadow-lg mt-2 h-16 w-full bg-zinc-800 hover:bg-zinc-900  flex items-center justify-start gap-3 rounded-md border border-transparent cursor-pointer opacity-90 hover:opacity-100 hover:border hover:${
-        selectedPokemon ? "border-red-500" : "border-white"
-      } ${selectedPokemon ? "border-red-400" : ""} `}
+      className={`shadow-lg mt-2 h-16 w-full bg-zinc-800 hover:bg-zinc-900  flex items-center justify-start gap-3 rounded-md border  cursor-pointer opacity-90 hover:opacity-100 hover:border ${
+        selectedPokemon ? "hover:border-red-400" : "hover:border-white"
+      } ${selectedPokemon ? "border-red-400" : "border-zinc-900"} `}
     >
       <div className="flex justify-center items-center bg-zinc-900 rounded-r-xl rounded-l-sm w-20 h-14 ml-1 shadow-md">
         <img
