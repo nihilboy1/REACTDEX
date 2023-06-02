@@ -4,6 +4,8 @@
 </h3>
 
 <h1>🔎 | Vizualização do projeto:</h1>
+<img src="https://i.imgur.com/swhYrBR.gif" alt="gif da aplicação" />
+<br/>
 <img src="https://i.imgur.com/u4mI7tZ.png" alt="Foto da aplicação mobile" />
 <br/>
 <img src="https://i.imgur.com/SfD6Iba.png" alt="Foto da aplicação homepage" />
